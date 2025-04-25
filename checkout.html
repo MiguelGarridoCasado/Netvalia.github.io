@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netvalia Networks - Finalizar Compra</title>
-    <!-- Mismos estilos que index.html -->
+  
     <style>
         /* Añade estos estilos adicionales */
         .proceso-compra {
@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-    <!-- Mismo header y nav que index.html -->
+  
 
     <main class="contenido-principal">
         <section class="proceso-compra">
@@ -59,7 +59,7 @@
             <div class="paso-compra">
                 <h3>Plan Seleccionado</h3>
                 <div class="detalle-plan" id="info-plan">
-                    <!-- Los datos se cargarán con JavaScript -->
+                  
                 </div>
             </div>
 
@@ -115,23 +115,23 @@
                 nombre: 'Básico',
                 velocidad: '300 Mbps',
                 precio: '39,99€/mes',
-                caracteristicas: ['Instalación gratis', 'Hasta 300Mbps simétricos', 'Soporte 24/7','Proteccion DDos básica','Contrato 12 meses'.]
+                caracteristicas: ['Instalación gratis', 'Hasta 300Mbps simétricos', 'Soporte 24/7']
             },
             premium: {
                 nombre: 'Premium',
                 velocidad: '600 Mbps',
                 precio: '69,99€/mes',
-                caracteristicas: ['Hasta 600Mbps simétricos', 'IP fija incluida', 'Firewall avanzado','50GB almacenamiento cloud','Contrato 12 meses','Instalación gratis','Soporte 24/7'.]
+                caracteristicas: ['Hasta 600Mbps simétricos', 'IP fija incluida', 'Firewall avanzado']
             },
             empresa: {
                 nombre: 'Empresa',
                 velocidad: '1 Gbps',
                 precio: '109,99€/mes',
-                caracteristicas: ['Multiples IPs fija', '1Gbps simétrico', 'Soporte prioritario','Cyberseguridad premium','500GB almacenamiento cloud','Instalación gratis','Soporte 24/7'.]
+                caracteristicas: ['Multiples IPs fija', '1Gbps simétrico', 'Soporte prioritario']
             }
         };
 
-        // Mostrar información del plan
+       
         function cargarPlan() {
             const planSeleccionado = planes[plan] || planes.basico;
             const infoPlan = document.getElementById('info-plan');
