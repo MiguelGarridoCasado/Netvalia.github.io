@@ -181,19 +181,6 @@ header {
             margin-top: 3rem;
         }
 
-        .servicio-card {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid #1a73e8;
-            transition: transform 0.3s ease;
-        }
-
-        .servicio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(26, 115, 232, 0.3);
-        }
-
         footer {
             background: rgba(0, 0, 0, 0.9);
             text-align: center;
@@ -348,6 +335,10 @@ header {
     cursor: pointer;
     font-size: 1.1rem;
     transition: all 0.3s ease;
+     display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
 }
 
 .boton-contract:hover {
@@ -402,7 +393,7 @@ header {
                 <li>📞 Soporte 24/7</li>
                 <li>📝 Contrato 12 meses</li>
             </ul>
-            <button class="boton">Contratar</button>
+            <a href="checkout.html?plan=basico" class="boton-contract">Contratar</a>
         </div>
 
         <!-- Plan Profesional -->
@@ -419,8 +410,9 @@ header {
                 <li>☁️ 50GB almacenamiento cloud</li>
                 <li>📝 Contrato 12 meses</li>
                  <li>✔️ Instalación gratis</li>
+                <li>📞 Soporte 24/7</li>
             </ul>
-            <button class="boton">Contratar</button>
+           <a href="checkout.html?plan=premium" class="boton-contract">Contratar</a>
         </div>
 
         <!-- Plan Empresa -->
@@ -437,8 +429,9 @@ header {
                 <li>☁️ 500GB almacenamiento cloud</li>
                 <li>👔 Asistencia técnica prioritario</li>
                  <li>✔️ Instalación gratis</li>
+                <li>📞 Soporte 24/7</li>
             </ul>
-            <button class="boton">Contratar</button>
+            <a href="checkout.html?plan=empresa" class="boton-contract">Contratar</a>
         </div>
     </div>
 </section>
