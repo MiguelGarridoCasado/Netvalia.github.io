@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netvalia Networks - Finalizar Compra</title>
+    <!-- Mismos estilos que index.html -->
+    <style>
+        /* Añade estos estilos adicionales */
+        .proceso-compra {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+
+        .paso-compra {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #1a73e8;
+            border-radius: 10px;
+        }
+
+        .detalle-plan {
+            background: rgba(26, 115, 232, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .formulario-pago {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .campo-formulario {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1a73e8;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mismo header y nav que index.html -->
+
+    <main class="contenido-principal">
+        <section class="proceso-compra">
+            <h2>Finalizar Contratación</h2>
+            
+            <div class="paso-compra">
+                <h3>Plan Seleccionado</h3>
+                <div class="detalle-plan" id="info-plan">
+                    <!-- Los datos se cargarán con JavaScript -->
+                </div>
+            </div>
+
+            <div class="paso-compra">
+                <h3>Datos Personales</h3>
+                <form class="formulario-pago" id="formulario-pago">
+                    <div class="campo-formulario">
+                        <label>Nombre completo:</label>
+                        <input type="text" required>
+                    </div>
+                    
+                    <div class="campo-formulario">
+                        <label>Correo electrónico:</label>
+                        <input type="email" required>
+                    </div>
+                    
+                    <div class="campo-formulario">
+                        <label>Dirección de instalación:</label>
+                        <input type="text" required>
+                    </div>
+                </form>
+            </div>
+
+            <div class="paso-compra">
+                <h3>Método de Pago</h3>
+                <div class="formulario-pago">
+                    <div class="campo-formulario">
+                        <label>Tarjeta de crédito:</label>
+                        <select required>
+                            <option value="">Seleccione método</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="boton-contract" form="formulario-pago">
+                        Confirmar y Pagar
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Obtener parámetro del plan
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan');
+
+        // Datos de los planes
+        const planes = {
+            basico: {
+                nombre: 'Básico',
+                velocidad: '300 Mbps',
+                precio: '29,99€/mes',
+                caracteristicas: ['Instalación gratis', 'Router WiFi 6', 'Soporte 24/7']
+            },
+            premium: {
+                nombre: 'Premium',
+                velocidad: '600 Mbps',
+                precio: '49,99€/mes',
+                caracteristicas: ['+100 canales TV', 'Línea móvil gratis', 'Alarma digital']
+            },
+            empresa: {
+                nombre: 'Empresa',
+                velocidad: '1 Gbps',
+                precio: '99,99€/mes',
+                caracteristicas: ['IP fija dedicada', 'SLA 99.9%', 'Soporte prioritario']
+            }
+        };
+
+        // Mostrar información del plan
+        function cargarPlan() {
+            const planSeleccionado = planes[plan] || planes.basico;
+            const infoPlan = document.getElementById('info-plan');
+            
+            infoPlan.innerHTML = `
+                <h4>${planSeleccionado.nombre}</h4>
+                <p>Velocidad: ${planSeleccionado.velocidad}</p>
+                <p>Precio: ${planSeleccionado.precio}</p>
+                <ul>
+                    ${planSeleccionado.caracteristicas.map(c => `<li>✔️ ${c}</li>`).join('')}
+                </ul>
+            `;
+        }
+
+        // Manejar envío del formulario
+        document.getElementById('formulario-pago').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí iría la conexión con la pasarela de pago
+            alert('¡Contratación exitosa! Recibirás un email de confirmación.');
+            window.location.href = 'index.html';
+        });
+
+        // Inicializar
+        cargarPlan();
+    </script>
+</body>
+</html>
