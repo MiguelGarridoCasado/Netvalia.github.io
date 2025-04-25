@@ -217,7 +217,61 @@ header {
             background: #0d47a1;
             box-shadow: 0 0 20px rgba(26, 115, 232, 0.5);
         }
-       
+       .plan-precios {
+        position: relative;
+        padding: 2.5rem !important;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .detalle-precio {
+        margin: 1.5rem 0;
+        padding: 1rem;
+        background: rgba(26, 115, 232, 0.1);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .precio {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #1a73e8;
+        margin: 0.5rem 0;
+    }
+
+    .velocidad {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    .caracteristicas-plan {
+        list-style: none;
+        margin: 1.5rem 0;
+    }
+
+    .caracteristicas-plan li {
+        padding: 0.8rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .plan-precios.destacado {
+        background: rgba(26, 115, 232, 0.05);
+        border: 2px solid #1a73e8;
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(26, 115, 232, 0.2);
+    }
+
+    .plan-precios.destacado .precio {
+        color: #0d47a1;
+    }
+
+    .plan-precios:hover {
+        transform: translateY(-5px);
+    }
+
     </style>
 </head>
 <body>
@@ -235,6 +289,62 @@ header {
     </nav>
 
     <main class="contenido-principal">
+        <section class="seccion-fibra">
+    <h2>Planes de Fibra Óptica</h2>
+    <div class="grid-servicios">
+        <!-- Plan Básico -->
+        <div class="servicio-card plan-precios">
+            <h3>🛡️ Plan Básico</h3>
+            <div class="detalle-precio">
+                <span class="velocidad">300 Mbps</span>
+                <span class="precio">€29,99/mes</span>
+            </div>
+            <ul class="caracteristicas-plan">
+                <li>🚀 Hasta 300 Mbps simétricos</li>
+                <li>📶 WiFi 6 incluido</li>
+                <li>🛡️ Protección DDoS básica</li>
+                <li>📞 Soporte 24/7</li>
+                <li>📝 Contrato 12 meses</li>
+            </ul>
+            <button class="boton">Contratar</button>
+        </div>
+
+        <!-- Plan Profesional -->
+        <div class="servicio-card plan-precios destacado">
+            <h3>🚀 Plan Profesional</h3>
+            <div class="detalle-precio">
+                <span class="velocidad">600 Mbps</span>
+                <span class="precio">€49,99/mes</span>
+            </div>
+            <ul class="caracteristicas-plan">
+                <li>🚀 Hasta 600 Mbps simétricos</li>
+                <li>🖥️ IP fija incluida</li>
+                <li>🔒 Firewall avanzado</li>
+                <li>☁️ 50GB almacenamiento cloud</li>
+                <li>📝 Contrato 12 meses</li>
+            </ul>
+            <button class="boton">Contratar</button>
+        </div>
+
+        <!-- Plan Empresa -->
+        <div class="servicio-card plan-precios">
+            <h3>🏢 Plan Empresa</h3>
+            <div class="detalle-precio">
+                <span class="velocidad">1 Gbps</span>
+                <span class="precio">€89,99/mes</span>
+            </div>
+            <ul class="caracteristicas-plan">
+                <li>🚀 1 Gbps simétricos</li>
+                <li>🌍 Múltiples IPs fijas</li>
+                <li>🔒 Ciberseguridad premium</li>
+                <li>☁️ 500GB almacenamiento cloud</li>
+                <li>👔 Asistencia técnica prioritario</li>
+            </ul>
+            <button class="boton">Contratar</button>
+        </div>
+    </div>
+</section>
+
         <section class="seccion-fibra">
             <h2>Redes de Fibra Óptica de Última Generación</h2>
             <p>Implementamos soluciones de conectividad con tecnología de punta:</p>
