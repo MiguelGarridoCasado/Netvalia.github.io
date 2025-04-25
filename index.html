@@ -223,6 +223,8 @@ header {
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+
+        
     .detalle-precio {
         margin: 1.5rem 0;
         padding: 1rem;
@@ -272,6 +274,100 @@ header {
         transform: translateY(-5px);
     }
 
+        /* Sección de Precios */
+.precio-fibra {
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.precio-fibra h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a73e8;
+}
+
+.plan-precio {
+    position: relative;
+    padding: 2rem;
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.plan-precio.destacado {
+    border-color: #1a73e8;
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(26, 115, 232, 0.2);
+}
+
+.detalle-precio {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: rgba(26, 115, 232, 0.1);
+    border-radius: 10px;
+}
+
+.precio {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a73e8;
+    margin: 1rem 0;
+}
+
+.velocidad {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.beneficios {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.beneficios li {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.boton-contract {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.boton-contract:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 115, 232, 0.4);
+}
+
+.oferta {
+    display: block;
+    color: #00e676;
+    font-weight: 700;
+    margin-top: 1rem;
+    animation: parpadeo 1.5s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
     </style>
 </head>
 <body>
@@ -289,7 +385,7 @@ header {
     </nav>
 
     <main class="contenido-principal">
-        <section class="seccion-fibra">
+        <section class="precio-fibra">
     <h2>Planes de Fibra Óptica</h2>
     <div class="grid-servicios">
         <!-- Plan Básico -->
@@ -297,11 +393,11 @@ header {
             <h3>🛡️ Plan Básico</h3>
             <div class="detalle-precio">
                 <span class="velocidad">300 Mbps</span>
-                <span class="precio">€29,99/mes</span>
+                <span class="precio">€39,99/mes</span>
             </div>
             <ul class="caracteristicas-plan">
                 <li>🚀 Hasta 300 Mbps simétricos</li>
-                <li>📶 WiFi 6 incluido</li>
+                <li>✔️ Instalación gratis</li>
                 <li>🛡️ Protección DDoS básica</li>
                 <li>📞 Soporte 24/7</li>
                 <li>📝 Contrato 12 meses</li>
@@ -314,7 +410,7 @@ header {
             <h3>🚀 Plan Profesional</h3>
             <div class="detalle-precio">
                 <span class="velocidad">600 Mbps</span>
-                <span class="precio">€49,99/mes</span>
+                <span class="precio">€69,99/mes</span>
             </div>
             <ul class="caracteristicas-plan">
                 <li>🚀 Hasta 600 Mbps simétricos</li>
@@ -322,6 +418,7 @@ header {
                 <li>🔒 Firewall avanzado</li>
                 <li>☁️ 50GB almacenamiento cloud</li>
                 <li>📝 Contrato 12 meses</li>
+                 <li>✔️ Instalación gratis</li>
             </ul>
             <button class="boton">Contratar</button>
         </div>
@@ -331,7 +428,7 @@ header {
             <h3>🏢 Plan Empresa</h3>
             <div class="detalle-precio">
                 <span class="velocidad">1 Gbps</span>
-                <span class="precio">€89,99/mes</span>
+                <span class="precio">€109,99/mes</span>
             </div>
             <ul class="caracteristicas-plan">
                 <li>🚀 1 Gbps simétricos</li>
@@ -339,6 +436,7 @@ header {
                 <li>🔒 Ciberseguridad premium</li>
                 <li>☁️ 500GB almacenamiento cloud</li>
                 <li>👔 Asistencia técnica prioritario</li>
+                 <li>✔️ Instalación gratis</li>
             </ul>
             <button class="boton">Contratar</button>
         </div>
