@@ -217,8 +217,49 @@ header {
             background: #0d47a1;
             box-shadow: 0 0 20px rgba(26, 115, 232, 0.5);
         }
-       
+
+        .explicacion-fibra {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
+            border-top: 3px solid #3498db;
+            margin-top: 50px;
+        }
+
+        .contenedor-explicacion {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .seccion-fibra h3 {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .seccion-fibra p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .icono-fibra {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .contenedor-explicacion {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -252,8 +293,38 @@ header {
                 </div>
             </div>
         </section>
-    </main>
+         <footer class="explicacion-fibra">
+        <div class="contenedor-explicacion">
+            <div class="seccion-fibra">
+                <i class="fas fa-lightbulb icono-fibra"></i>
+                <h3>¿Qué es la Fibra Óptica?</h3>
+                <p>La fibra óptica es un medio de transmisión de datos que utiliza hilos de vidrio o plástico transparente para transmitir información mediante pulsos de luz. Esta tecnología permite enviar grandes cantidades de datos a velocidades extremadamente altas y sobre largas distancias.</p>
+            </div>
 
+            <div class="seccion-fibra">
+                <i class="fas fa-globe-americas icono-fibra"></i>
+                <h3>¿Para qué se utiliza?</h3>
+                <p>Se emplea principalmente en:
+                    <br>- Telecomunicaciones (Internet, TV y telefonía)
+                    <br>- Redes de área local (LAN)
+                    <br>- Sistemas médicos (endoscopios y equipos láser)
+                    <br>- Iluminación y decoración
+                    <br>- Sensores en entornos industriales</p>
+            </div>
+
+            <div class="seccion-fibra">
+                <i class="fas fa-trophy icono-fibra"></i>
+                <h3>Ventajas sobre otras tecnologías</h3>
+                <p>- Mayor velocidad: Hasta 1 Tbps en laboratorio
+                <br>- Menor latencia: Ideal para aplicaciones en tiempo real
+                <br>- Inmunidad a interferencias electromagnéticas
+                <br>- Mayor ancho de banda: Soporta más usuarios simultáneos
+                <br>- Menor atenuación: Señal más estable en largas distancias
+                <br>- Seguridad: Más difícil de interceptar que el cobre</p>
+            </div>
+        </div>
+    </footer>
+    </main> 
     <footer>
         <p>&copy; 2024 Netvalia Networks - Todos los derechos reservados</p>
     </footer>
