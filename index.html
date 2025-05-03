@@ -170,74 +170,125 @@ header {
             padding: 2rem;
             margin-top: auto;
         }
-        .seccion-fibra {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            border: 1px solid #1a73e8;
-            box-shadow: 0 0 30px rgba(26, 115, 232, 0.2);
-        }
+       .servicios-completos {
+    padding: 4rem 2rem;
+    background: rgba(10, 14, 20, 0.97);
+    position: relative;
+    z-index: 1;
+}
 
-    .categoria-servicio {
-        margin: 3rem 0;
-        padding: 2rem;
-        background: rgba(0,0,0,0.2);
-        border-radius: 15px;
-    }
+.servicio-cuadrado {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(26, 115, 232, 0.15);
+    border-radius: 15px;
+    padding: 2rem;
+    min-width: 320px;
+    margin: 1rem;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+}
 
-    .categoria-servicio h3 {
-        color: #1a73e8;
-        margin-bottom: 2rem;
-        font-size: 1.8rem;
-    }
+.servicio-cuadrado::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(26, 115, 232, 0.1), transparent);
+    transform: rotate(45deg);
+    pointer-events: none;
+    transition: 0.5s;
+}
 
-    .rango-precio {
-        color: #00e676;
-        font-size: 1.4rem;
-        font-weight: 500;
-    }
+.servicio-cuadrado:hover::before {
+    animation: brillo 1.5s infinite;
+}
 
-    .lista-extras {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
+@keyframes brillo {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
-    .extra-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 1.5rem;
-        background: rgba(255,255,255,0.05);
-        border-radius: 10px;
-    }
+.servicio-cuadrado:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #1a73e8;
+    box-shadow: 0 15px 35px rgba(26, 115, 232, 0.2);
+}
 
-    .icono {
-        font-size: 2rem;
-    }
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
 
-    .detalle-extra h5 {
-        color: #1a73e8;
-        margin-bottom: 0.5rem;
-    }
+.scroll-container > * {
+    scroll-snap-align: start;
+}
 
-    .servicio-card.destacado {
-        border: 2px solid #1a73e8;
-        transform: scale(1.02);
-        background: rgba(26, 115, 232, 0.05);
-    }
+.contratar-btn {
+    background: rgba(26, 115, 232, 0.1);
+    border: 2px solid #1a73e8;
+    color: #8ab4f8;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.5rem;
+}
 
-    .beneficios {
-        margin-top: 1rem;
-        padding-left: 1rem;
-    }
+.contratar-btn:hover {
+    background: #1a73e8;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(26, 115, 232, 0.4);
+}
 
-    .beneficios li {
-        list-style-type: '➤ ';
-        padding: 0.3rem 0;
-        color: #8ab4f8;
+.precio-box {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a73e8;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(26, 115, 232, 0.08);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metodos-pago {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.iconos-pago img {
+    width: 60px;
+    margin: 0 1.5rem;
+    filter: grayscale(1) brightness(2);
+    transition: all 0.3s ease;
+}
+
+.iconos-pago img:hover {
+    filter: none;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .servicio-cuadrado {
+        min-width: 280px;
     }
+    
+    .iconos-pago img {
+        width: 45px;
+        margin: 0 0.8rem;
+    }
+}
 </style>
 <body>
     <header>
@@ -253,120 +304,176 @@ header {
         </ul>
     </nav>
 
- <section class="precio-fibra">
-    <h2>Nuestros Servicios y Precios</h2>
+<section class="servicios-completos">
+    <h2>Nuestros Servicios Integrales</h2>
+
+    <!-- Métodos de Pago -->
+    <div class="metodos-pago">
+        <div class="iconos-pago">
+            <img src="visa-icon.svg" alt="Visa">
+            <img src="mastercard-icon.svg" alt="Mastercard">
+            <img src="paypal-icon.svg" alt="PayPal">
+            <img src="bitcoin-icon.svg" alt="Bitcoin">
+        </div>
+    </div>
 
     <!-- Infraestructura Base -->
-    <div class="categoria-servicio">
-        <h3>🛠️ Infraestructura Base</h3>
-        <div class="grid-servicios">
-            <div class="servicio-card">
+    <div class="categoria-scroll">
+        <h3>🔧 Infraestructura Base</h3>
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
                 <h4>Instalación Local</h4>
-                <div class="detalle-precio">
-                    <span class="rango-precio">1.000€ - 3.000€</span>
-                    <p>Servidor en local propio</p>
-                </div>
+                <div class="precio-box">1.000€ - 3.000€</div>
+                <ul>
+                    <li>✔️ Servidor físico</li>
+                    <li>✔️ Instalación profesional</li>
+                    <li>✔️ Garantía 2 años</li>
+                </ul>
+                <a href="checkout.html?plan=instalacion-local" class="contratar-btn">Contratar</a>
             </div>
-            
-            <div class="servicio-card">
+
+            <div class="servicio-cuadrado">
                 <h4>Equipos de Red</h4>
-                <div class="detalle-precio">
-                    <span class="rango-precio">150€ - 500€/unidad</span>
-                    <p>Router y equipos profesionales</p>
-                </div>
+                <div class="precio-box">150€ - 500€</div>
+                <ul>
+                    <li>✔️ Routers profesionales</li>
+                    <li>✔️ Switches de alta capacidad</li>
+                    <li>✔️ Certificación Cisco</li>
+                </ul>
+                <a href="checkout.html?plan=equipos-red" class="contratar-btn">Contratar</a>
             </div>
 
-            <div class="servicio-card destacado">
+            <div class="servicio-cuadrado destacado">
                 <h4>Fibra Dedicada</h4>
-                <div class="detalle-precio">
-                    <span class="rango-precio">300€ - 1.000€/mes</span>
-                    <p>Velocidad y SLA personalizados</p>
-                </div>
+                <div class="precio-box">300€ - 1.000€/mes</div>
+                <ul>
+                    <li>✔️ Velocidad personalizable</li>
+                    <li>✔️ SLA 99.99%</li>
+                    <li>✔️ Soporte prioritario</li>
+                </ul>
+                <a href="checkout.html?plan=fibra-dedicada" class="contratar-btn">Contratar</a>
             </div>
         </div>
     </div>
 
-    <!-- Servicios para Empresas -->
-    <div class="categoria-servicio">
-        <h3>🏢 Soluciones Empresariales</h3>
-        <div class="grid-servicios">
-            <div class="servicio-card">
+    <!-- Servicios Empresariales -->
+    <div class="categoria-scroll">
+        <h3>🏭 Soluciones Corporativas</h3>
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
                 <h4>Servidor Dedicado</h4>
-                <div class="detalle-precio">
-                    <span class="precio">Desde 200€/mes</span>
-                    <ul class="beneficios">
-                        <li>✔️ Recursos exclusivos</li>
-                        <li>✔️ Alto rendimiento</li>
-                    </ul>
-                </div>
+                <div class="precio-box">Desde 200€/mes</div>
+                <ul>
+                    <li>✔️ Recursos exclusivos</li>
+                    <li>✔️ 32 GB RAM</li>
+                    <li>✔️ 1 Gbps dedicado</li>
+                </ul>
+                <a href="checkout.html?plan=servidor-dedicado" class="contratar-btn">Contratar</a>
             </div>
 
-            <div class="servicio-card">
+            <div class="servicio-cuadrado">
+                <h4>VPS Profesional</h4>
+                <div class="precio-box">Desde 80€/mes</div>
+                <ul>
+                    <li>✔️ 4 vCPU</li>
+                    <li>✔️ 8 GB RAM</li>
+                    <li>✔️ SSD 160 GB</li>
+                </ul>
+                <a href="checkout.html?plan=vps-pro" class="contratar-btn">Contratar</a>
+            </div>
+
+            <div class="servicio-cuadrado">
                 <h4>Seguridad Gestionada</h4>
-                <div class="detalle-precio">
-                    <span class="precio">Desde 50€/mes</span>
-                    <ul class="beneficios">
-                        <li>✔️ Firewall avanzado</li>
-                        <li>✔️ Protección 360°</li>
-                    </ul>
-                </div>
+                <div class="precio-box">Desde 50€/mes</div>
+                <ul>
+                    <li>✔️ Firewall avanzado</li>
+                    <li>✔️ Detección de intrusos</li>
+                    <li>✔️ Monitoreo 24/7</li>
+                </ul>
+                <a href="checkout.html?plan=seguridad" class="contratar-btn">Contratar</a>
             </div>
-
-            <!-- Más servicios empresariales... -->
         </div>
     </div>
 
-    <!-- Servicios para Particulares -->
-    <div class="categoria-servicio">
-        <h3>👨💻 Soluciones Personales</h3>
-        <div class="grid-servicios">
-            <div class="servicio-card">
-                <h4>Almacenamiento Cloud</h4>
-                <div class="detalle-precio">
-                    <span class="precio">5€/100GB/mes</span>
-                    <ul class="beneficios">
-                        <li>✔️ Acceso 24/7</li>
-                        <li>✔️ Encriptación AES-256</li>
-                    </ul>
-                </div>
+    <!-- Servicios Particulares -->
+    <div class="categoria-scroll">
+        <h3>👤 Soluciones Personales</h3>
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
+                <h4>Hosting Básico</h4>
+                <div class="precio-box">5€/mes</div>
+                <ul>
+                    <li>✔️ 10 GB almacenamiento</li>
+                    <li>✔️ 1 dominio incluido</li>
+                    <li>✔️ Certificado SSL</li>
+                </ul>
+                <a href="checkout.html?plan=hosting-basico" class="contratar-btn">Contratar</a>
             </div>
 
-            <div class="servicio-card destacado">
+            <div class="servicio-cuadrado destacado">
                 <h4>VPN Premium</h4>
-                <div class="detalle-precio">
-                    <span class="precio">7€/mes</span>
-                    <ul class="beneficios">
-                        <li>✔️ 50 países disponibles</li>
-                        <li>✔️ Sin registros</li>
-                    </ul>
-                </div>
+                <div class="precio-box">7€/mes</div>
+                <ul>
+                    <li>✔️ 50 países disponibles</li>
+                    <li>✔️ Sin registros</li>
+                    <li>✔️ Conexión ilimitada</li>
+                </ul>
+                <a href="checkout.html?plan=vpn-premium" class="contratar-btn">Contratar</a>
             </div>
-            <!-- Más servicios personales... -->
+
+            <div class="servicio-cuadrado">
+                <h4>Almacenamiento Cloud</h4>
+                <div class="precio-box">5€/100GB</div>
+                <ul>
+                    <li>✔️ Encriptación AES-256</li>
+                    <li>✔️ Acceso multiplataforma</li>
+                    <li>✔️ Historial de versiones</li>
+                </ul>
+                <a href="checkout.html?plan=cloud-storage" class="contratar-btn">Contratar</a>
+            </div>
         </div>
     </div>
 
-    <!-- Extras -->
-    <div class="extras-servicio">
-        <h3>🔧 Servicios Adicionales</h3>
-        <div class="lista-extras">
-            <div class="extra-item">
-                <span class="icono">🌐</span>
-                <div class="detalle-extra">
-                    <h5>Dominio Web</h5>
-                    <p>.com/.es desde 10€/año</p>
-                </div>
+    <!-- Servicios Adicionales -->
+    <div class="categoria-scroll">
+        <h3>⚙️ Complementos</h3>
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
+                <h4>Dominio Web</h4>
+                <div class="precio-box">10€ - 15€/año</div>
+                <ul>
+                    <li>✔️ .com .net .org</li>
+                    <li>✔️ Gestión DNS incluida</li>
+                    <li>✔️ Protección whois</li>
+                </ul>
+                <a href="checkout.html?plan=dominio" class="contratar-btn">Contratar</a>
             </div>
-            
-            <div class="extra-item">
-                <span class="icono">🔒</span>
-                <div class="detalle-extra">
-                    <h5>Certificado SSL</h5>
-                    <p>Gratis - 100€/año</p>
-                </div>
+
+            <div class="servicio-cuadrado">
+                <h4>Certificado SSL</h4>
+                <div class="precio-box">30€ - 100€/año</div>
+                <ul>
+                    <li>✔️ Validación extendida</li>
+                    <li>✔️ Compatibilidad total</li>
+                    <li>✔️ Sello de confianza</li>
+                </ul>
+                <a href="checkout.html?plan=ssl" class="contratar-btn">Contratar</a>
+            </div>
+
+            <div class="servicio-cuadrado">
+                <h4>Soporte Premium</h4>
+                <div class="precio-box">50€/mes</div>
+                <ul>
+                    <li>✔️ Respuesta en 15 min</li>
+                    <li>✔️ Asistencia remota</li>
+                    <li>✔️ Mantenimiento preventivo</li>
+                </ul>
+                <a href="checkout.html?plan=soporte" class="contratar-btn">Contratar</a>
             </div>
         </div>
     </div>
 </section>
+
 
     <footer>
         <p>&copy; 2024 Netvalia Networks - Todos los derechos reservados</p>
