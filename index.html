@@ -217,12 +217,17 @@ header {
     box-shadow: 0 15px 35px rgba(26, 115, 232, 0.2);
     }
         
-.contenido-servicio {
-    flex: 1 0 auto; /* Ocupa el espacio disponible */
-    margin-bottom: 1.5rem;
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
 }
-        
-.contratar-btn 
+
+.scroll-container > * {
+    scroll-snap-align: start;
+}  
+.contratar-btn {
     width: calc(100% - 3rem); /* 1.5rem de padding a cada lado */
     margin: 0 auto;
     display: block;
@@ -297,11 +302,22 @@ header {
 
 <section class="servicios-completos">
     <h2>Nuestros Servicios Integrales</h2>
-    
+
+    <!-- Métodos de Pago -->
+    <div class="metodos-pago">
+        <div class="iconos-pago">
+            <img src="visa-icon.svg" alt="Visa">
+            <img src="mastercard-icon.svg" alt="Mastercard">
+            <img src="paypal-icon.svg" alt="PayPal">
+            <img src="bitcoin-icon.svg" alt="Bitcoin">
+        </div>
+    </div>
+
+    <!-- Infraestructura Base -->
     <div class="categoria-scroll">
         <h3>🔧 Infraestructura Base</h3>
-          <div class="servicio-cuadrado">
-             <div class="contenido-servicio">
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
                 <h4>Instalación Local</h4>
                 <div class="precio-box">1.000€ - 3.000€</div>
                 <ul>
@@ -311,8 +327,8 @@ header {
                 </ul>
                 <a href="checkout.html?plan=instalacion-local" class="contratar-btn">Contratar</a>
             </div>
-<div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+
+            <div class="servicio-cuadrado">
                 <h4>Equipos de Red</h4>
                 <div class="precio-box">150€ - 500€</div>
                 <ul>
@@ -323,8 +339,7 @@ header {
                 <a href="checkout.html?plan=equipos-red" class="contratar-btn">Contratar</a>
             </div>
 
-            <div class="servicio-cuadrado">
-             <div class="contenido-servicio">
+            <div class="servicio-cuadrado destacado">
                 <h4>Fibra Dedicada</h4>
                 <div class="precio-box">300€ - 1.000€/mes</div>
                 <ul>
@@ -336,11 +351,12 @@ header {
             </div>
         </div>
     </div>
- </div>
+
+    <!-- Servicios Empresariales -->
     <div class="categoria-scroll">
         <h3>🏭 Soluciones Corporativas</h3>
-        <div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
                 <h4>Servidor Dedicado</h4>
                 <div class="precio-box">Desde 200€/mes</div>
                 <ul>
@@ -350,8 +366,8 @@ header {
                 </ul>
                 <a href="checkout.html?plan=servidor-dedicado" class="contratar-btn">Contratar</a>
             </div>
-<div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+
+            <div class="servicio-cuadrado">
                 <h4>VPS Profesional</h4>
                 <div class="precio-box">Desde 80€/mes</div>
                 <ul>
@@ -361,8 +377,8 @@ header {
                 </ul>
                 <a href="checkout.html?plan=vps-pro" class="contratar-btn">Contratar</a>
             </div>
-<div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+
+            <div class="servicio-cuadrado">
                 <h4>Seguridad Gestionada</h4>
                 <div class="precio-box">Desde 50€/mes</div>
                 <ul>
@@ -372,14 +388,14 @@ header {
                 </ul>
                 <a href="checkout.html?plan=seguridad" class="contratar-btn">Contratar</a>
             </div>
-         </div>
-       </div>
-     </div>
+        </div>
+    </div>
 
+    <!-- Servicios Particulares -->
     <div class="categoria-scroll">
         <h3>👤 Soluciones Personales</h3>
-        <div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
                 <h4>Hosting Básico</h4>
                 <div class="precio-box">5€/mes</div>
                 <ul>
@@ -400,8 +416,8 @@ header {
                 </ul>
                 <a href="checkout.html?plan=vpn-premium" class="contratar-btn">Contratar</a>
             </div>
-<div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+
+            <div class="servicio-cuadrado">
                 <h4>Almacenamiento Cloud</h4>
                 <div class="precio-box">5€/100GB</div>
                 <ul>
@@ -413,12 +429,12 @@ header {
             </div>
         </div>
     </div>
- </div>
-    
+
+    <!-- Servicios Adicionales -->
     <div class="categoria-scroll">
         <h3>⚙️ Complementos</h3>
-        <div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+        <div class="scroll-container">
+            <div class="servicio-cuadrado">
                 <h4>Dominio Web</h4>
                 <div class="precio-box">10€ - 15€/año</div>
                 <ul>
@@ -428,8 +444,8 @@ header {
                 </ul>
                 <a href="checkout.html?plan=dominio" class="contratar-btn">Contratar</a>
             </div>
-<div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+
+            <div class="servicio-cuadrado">
                 <h4>Certificado SSL</h4>
                 <div class="precio-box">30€ - 100€/año</div>
                 <ul>
@@ -439,8 +455,8 @@ header {
                 </ul>
                 <a href="checkout.html?plan=ssl" class="contratar-btn">Contratar</a>
             </div>
-<div class="servicio-cuadrado">
-    <div class="contenido-servicio">
+
+            <div class="servicio-cuadrado">
                 <h4>Soporte Premium</h4>
                 <div class="precio-box">50€/mes</div>
                 <ul>
@@ -452,7 +468,6 @@ header {
             </div>
         </div>
     </div>
- </div>
 </section>
 
 
