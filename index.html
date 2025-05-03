@@ -205,6 +205,10 @@ header {
 
 .servicio-cuadrado:hover::before {
     animation: brillo 1.5s infinite;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 @keyframes brillo {
@@ -243,6 +247,12 @@ header {
     text-align: center;
     text-decoration: none;
     margin-top: 1.5rem;
+     margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
 }
 
 .contratar-btn:hover {
@@ -306,18 +316,7 @@ header {
 
 <section class="servicios-completos">
     <h2>Nuestros Servicios Integrales</h2>
-
-    <!-- Métodos de Pago -->
-    <div class="metodos-pago">
-        <div class="iconos-pago">
-            <img src="visa-icon.svg" alt="Visa">
-            <img src="mastercard-icon.svg" alt="Mastercard">
-            <img src="paypal-icon.svg" alt="PayPal">
-            <img src="bitcoin-icon.svg" alt="Bitcoin">
-        </div>
-    </div>
-
-    <!-- Infraestructura Base -->
+    
     <div class="categoria-scroll">
         <h3>🔧 Infraestructura Base</h3>
         <div class="scroll-container">
@@ -356,7 +355,6 @@ header {
         </div>
     </div>
 
-    <!-- Servicios Empresariales -->
     <div class="categoria-scroll">
         <h3>🏭 Soluciones Corporativas</h3>
         <div class="scroll-container">
@@ -395,7 +393,6 @@ header {
         </div>
     </div>
 
-    <!-- Servicios Particulares -->
     <div class="categoria-scroll">
         <h3>👤 Soluciones Personales</h3>
         <div class="scroll-container">
@@ -434,7 +431,6 @@ header {
         </div>
     </div>
 
-    <!-- Servicios Adicionales -->
     <div class="categoria-scroll">
         <h3>⚙️ Complementos</h3>
         <div class="scroll-container">
@@ -460,7 +456,7 @@ header {
                 <a href="checkout.html?plan=ssl" class="contratar-btn">Contratar</a>
             </div>
 
-            <div class="servicio-cuadrado">
+            <div class="servicio-cuadrado"> 
                 <h4>Soporte Premium</h4>
                 <div class="precio-box">50€/mes</div>
                 <ul>
