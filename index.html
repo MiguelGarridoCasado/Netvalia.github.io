@@ -177,12 +177,17 @@ header {
     z-index: 1;
 }
 
-.servicio-cuadrado {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 1.5rem;
+.servicio-cuadrado{
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(26, 115, 232, 0.15);
+    border-radius: 15px;
+    padding: 2rem;
+    min-width: 320px;
+    margin: 1rem;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
 }
 
 .servicio-cuadrado::before {
@@ -226,22 +231,24 @@ header {
 }
 
 .contratar-btn {
-    width: calc(100% - 2rem);
-    margin: 1rem auto 0;
+    background: rgba(26, 115, 232, 0.1);
+    border: 2px solid #1a73e8;
+    color: #8ab4f8;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: block;
+    width: 100%;
     text-align: center;
+    text-decoration: none;
+    margin-top: 1.5rem;
 }
 
 .contratar-btn:hover {
     background: #1a73e8;
     color: #fff;
     box-shadow: 0 0 25px rgba(26, 115, 232, 0.4);
-}
-        
-.contenedor-boton {
-    margin-top: auto;
-    width: 100%;
-    padding: 0 1rem;
 }
         
 .precio-box {
@@ -305,7 +312,7 @@ header {
         <div class="iconos-pago">
             <img src="visa-icon.svg" alt="Visa">
             <img src="mastercard-icon.svg" alt="Mastercard">
-            <img src="https://www.svgrepo.com/show/328122/paypal.svg" alt="PayPal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/PayPal_Logo_Icon_2014.svg" alt="PayPal">
             <img src="bitcoin-icon.svg" alt="Bitcoin">
         </div>
     </div>
@@ -322,9 +329,7 @@ header {
                     <li>✔️ Instalación profesional</li>
                     <li>✔️ Garantía 2 años</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=instalacion-local" class="contratar-btn">Contratar</a>
-              </div>
             </div>
 
             <div class="servicio-cuadrado">
@@ -335,9 +340,7 @@ header {
                     <li>✔️ Switches de alta capacidad</li>
                     <li>✔️ Certificación Cisco</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=equipos-red" class="contratar-btn">Contratar</a>
-                   </div>  
             </div>
 
             <div class="servicio-cuadrado destacado">
@@ -348,9 +351,7 @@ header {
                     <li>✔️ SLA 99.99%</li>
                     <li>✔️ Soporte prioritario</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=fibra-dedicada" class="contratar-btn">Contratar</a>
-                   </div>  
             </div>
         </div>
     </div>
@@ -367,9 +368,7 @@ header {
                     <li>✔️ 32 GB RAM</li>
                     <li>✔️ 1 Gbps dedicado</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=servidor-dedicado" class="contratar-btn">Contratar</a>
-                  </div>   
             </div>
 
             <div class="servicio-cuadrado">
@@ -380,9 +379,7 @@ header {
                     <li>✔️ 8 GB RAM</li>
                     <li>✔️ SSD 160 GB</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=vps-pro" class="contratar-btn">Contratar</a>
-                   </div>  
             </div>
 
             <div class="servicio-cuadrado">
@@ -393,9 +390,7 @@ header {
                     <li>✔️ Detección de intrusos</li>
                     <li>✔️ Monitoreo 24/7</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=seguridad" class="contratar-btn">Contratar</a>
-                    </div> 
             </div>
         </div>
     </div>
@@ -412,9 +407,7 @@ header {
                     <li>✔️ 1 dominio incluido</li>
                     <li>✔️ Certificado SSL</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=hosting-basico" class="contratar-btn">Contratar</a>
-                    </div> 
             </div>
 
             <div class="servicio-cuadrado destacado">
@@ -425,9 +418,7 @@ header {
                     <li>✔️ Sin registros</li>
                     <li>✔️ Conexión ilimitada</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=vpn-premium" class="contratar-btn">Contratar</a>
-                  </div>   
             </div>
 
             <div class="servicio-cuadrado">
@@ -438,9 +429,7 @@ header {
                     <li>✔️ Acceso multiplataforma</li>
                     <li>✔️ Historial de versiones</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=cloud-storage" class="contratar-btn">Contratar</a>
-                   </div>  
             </div>
         </div>
     </div>
@@ -457,9 +446,7 @@ header {
                     <li>✔️ Gestión DNS incluida</li>
                     <li>✔️ Protección whois</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=dominio" class="contratar-btn">Contratar</a>
-                  </div>   
             </div>
 
             <div class="servicio-cuadrado">
@@ -470,9 +457,7 @@ header {
                     <li>✔️ Compatibilidad total</li>
                     <li>✔️ Sello de confianza</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=ssl" class="contratar-btn">Contratar</a>
-                 </div>    
             </div>
 
             <div class="servicio-cuadrado">
@@ -483,9 +468,7 @@ header {
                     <li>✔️ Asistencia remota</li>
                     <li>✔️ Mantenimiento preventivo</li>
                 </ul>
-                <div class="contenedor-boton">
                 <a href="checkout.html?plan=soporte" class="contratar-btn">Contratar</a>
-              </div>
             </div>
         </div>
     </div>
