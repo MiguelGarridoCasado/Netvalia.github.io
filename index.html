@@ -179,206 +179,66 @@ header {
             box-shadow: 0 0 30px rgba(26, 115, 232, 0.2);
         }
 
-        .precios-container {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 40px 20px;
-            font-family: 'Arial', sans-serif;
-            border-top: 3px solid #3498db;
-        }
+    .categoria-servicio {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: rgba(0,0,0,0.2);
+        border-radius: 15px;
+    }
 
-        .seccion-precios {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            gap: 40px;
-        }
+    .categoria-servicio h3 {
+        color: #1a73e8;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
 
-        .tabla-precios {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+    .rango-precio {
+        color: #00e676;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
 
-        .tabla-precios th, .tabla-precios td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #3498db;
-        }
+    .lista-extras {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
 
-        .tabla-precios th {
-            background-color: #34495e;
-            color: #3498db;
-        }
+    .extra-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.05);
+        border-radius: 10px;
+    }
 
-        h2 {
-            color: #3498db;
-            border-bottom: 2px solid;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
+    .icono {
+        font-size: 2rem;
+    }
 
-        .lista-precios {
-            list-style: none;
-            padding: 0;
-        }
+    .detalle-extra h5 {
+        color: #1a73e8;
+        margin-bottom: 0.5rem;
+    }
 
-        .lista-precios li {
-            padding: 10px 0;
-            border-bottom: 1px dashed #3498db;
-        }
+    .servicio-card.destacado {
+        border: 2px solid #1a73e8;
+        transform: scale(1.02);
+        background: rgba(26, 115, 232, 0.05);
+    }
 
-        .icono-precios {
-            font-size: 1.5em;
-            margin-right: 10px;
-            color: #3498db;
-        }
+    .beneficios {
+        margin-top: 1rem;
+        padding-left: 1rem;
+    }
 
-        @media (max-width: 768px) {
-            .tabla-precios {
-                display: block;
-                overflow-x: auto;
-            }
-        }
-        .modal-pago {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            z-index: 1000;
-        }
-
-        .contenido-pago {
-            background-color: #2c3e50;
-            margin: 5% auto;
-            padding: 30px;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        .cerrar-modal {
-            position: absolute;
-            right: 20px;
-            top: 10px;
-            color: #fff;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
-        .formulario-pago {
-            display: grid;
-            gap: 15px;
-        }
-
-        .campo-formulario {
-            display: grid;
-            gap: 5px;
-        }
-
-        .campo-formulario input, .campo-formulario select {
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #3498db;
-            background-color: #34495e;
-            color: #fff;
-        }
-
-        .boton-contratar {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .boton-contratar:hover {
-            background-color: #2980b9;
-        }
-
-        .flotante-contratar {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #3498db;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .contenedor-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-
-        .tarjeta-servicio {
-            background: #34495e;
-            border: 2px solid #3498db;
-            border-radius: 10px;
-            padding: 25px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .tarjeta-servicio:hover {
-            transform: translateY(-5px);
-        }
-
-        .tarjeta-servicio h3 {
-            color: #3498db;
-            margin: 0 0 15px 0;
-            font-size: 1.3em;
-        }
-
-        .tarjeta-servicio p {
-            margin: 10px 0;
-            line-height: 1.5;
-        }
-
-        .precio {
-            font-size: 1.5em;
-            color: #2ecc71;
-            margin: 15px 0;
-            font-weight: bold;
-        }
-
-        .boton-contratar-tarjeta {
-            background: #3498db;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1em;
-            transition: background 0.3s ease;
-        }
-
-        .boton-contratar-tarjeta:hover {
-            background: #2980b9;
-        }
-
-        .etiqueta-tipo {
-            position: absolute;
-            top: -12px;
-            right: 15px;
-            background: #3498db;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.8em;
-        }
-    </style>
-</head>
+    .beneficios li {
+        list-style-type: '➤ ';
+        padding: 0.3rem 0;
+        color: #8ab4f8;
+    }
+</style>
 <body>
     <header>
         <h1>Netvalia Networks</h1>
@@ -393,145 +253,120 @@ header {
         </ul>
     </nav>
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+ <section class="precio-fibra">
+    <h2>Nuestros Servicios y Precios</h2>
 
-    <div class="precios-container">
-        <div class="seccion-precios">
-            <h2><i class="fas fa-server icono-precios"></i>Infraestructura Base</h2>
-            <div class="contenedor-servicios">
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Infraestructura</div>
-                    <h3>Instalación de servidor local</h3>
-                    <p>Configuración completa en tus instalaciones</p>
-                    <div class="precio">1.000€ - 3.000€</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('1000-3000')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
+    <!-- Infraestructura Base -->
+    <div class="categoria-servicio">
+        <h3>🛠️ Infraestructura Base</h3>
+        <div class="grid-servicios">
+            <div class="servicio-card">
+                <h4>Instalación Local</h4>
+                <div class="detalle-precio">
+                    <span class="rango-precio">1.000€ - 3.000€</span>
+                    <p>Servidor en local propio</p>
                 </div>
-
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Infraestructura</div>
-                    <h3>Router y equipos de red</h3>
-                    <p>Equipos profesionales de última generación</p>
-                    <div class="precio">150€ - 500€</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('150-500')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
-                </div>
-
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Infraestructura</div>
-                    <h3>Fibra óptica dedicada</h3>
-                    <p>Conexión de alta velocidad garantizada</p>
-                    <div class="precio">300€ - 1.000€/mes</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('300-1000')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
+            </div>
+            
+            <div class="servicio-card">
+                <h4>Equipos de Red</h4>
+                <div class="detalle-precio">
+                    <span class="rango-precio">150€ - 500€/unidad</span>
+                    <p>Router y equipos profesionales</p>
                 </div>
             </div>
 
-            <h2><i class="fas fa-building icono-precios"></i>Servicios para Empresas</h2>
-            <div class="contenedor-servicios">
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Empresa</div>
-                    <h3>Servidor dedicado</h3>
-                    <p>Recursos exclusivos para tu organización</p>
-                    <div class="precio">Desde 200€/mes</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('200')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
+            <div class="servicio-card destacado">
+                <h4>Fibra Dedicada</h4>
+                <div class="detalle-precio">
+                    <span class="rango-precio">300€ - 1.000€/mes</span>
+                    <p>Velocidad y SLA personalizados</p>
                 </div>
-
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Empresa</div>
-                    <h3>Servidor VPS profesional</h3>
-                    <p>Alto rendimiento con recursos compartidos</p>
-                    <div class="precio">Desde 80€/mes</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('80')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
-                </div>
-
-                <!-- Repetir para los demás servicios empresariales -->
             </div>
-
-            <h2><i class="fas fa-home icono-precios"></i>Servicios para Particulares</h2>
-            <div class="contenedor-servicios">
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Particular</div>
-                    <h3>Servidor de juegos</h3>
-                    <p>Para Minecraft, Rust y otros juegos</p>
-                    <div class="precio">Desde 10€/mes</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('10')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
-                </div>
-
-                <div class="tarjeta-servicio">
-                    <div class="etiqueta-tipo">Particular</div>
-                    <h3>Almacenamiento online</h3>
-                    <p>100 GB de espacio seguro</p>
-                    <div class="precio">Desde 5€/mes</div>
-                    <button class="boton-contratar-tarjeta" onclick="abrirModalPago('5')">
-                        <i class="fas fa-cart-plus"></i> Contratar
-                    </button>
-                </div>
-
-                <!-- Repetir para los demás servicios personales -->
-            </div>
-
-            <!-- Sección de extras (mismo formato) -->
         </div>
     </div>
 
-    <script>
-        // Función modificada para selección automática
-        function abrirModalPago(valor) {
-            const modal = document.getElementById('modalPago');
-            const selectServicios = document.getElementById('servicios');
+    <!-- Servicios para Empresas -->
+    <div class="categoria-servicio">
+        <h3>🏢 Soluciones Empresariales</h3>
+        <div class="grid-servicios">
+            <div class="servicio-card">
+                <h4>Servidor Dedicado</h4>
+                <div class="detalle-precio">
+                    <span class="precio">Desde 200€/mes</span>
+                    <ul class="beneficios">
+                        <li>✔️ Recursos exclusivos</li>
+                        <li>✔️ Alto rendimiento</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <h4>Seguridad Gestionada</h4>
+                <div class="detalle-precio">
+                    <span class="precio">Desde 50€/mes</span>
+                    <ul class="beneficios">
+                        <li>✔️ Firewall avanzado</li>
+                        <li>✔️ Protección 360°</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Más servicios empresariales... -->
+        </div>
+    </div>
+
+    <!-- Servicios para Particulares -->
+    <div class="categoria-servicio">
+        <h3>👨💻 Soluciones Personales</h3>
+        <div class="grid-servicios">
+            <div class="servicio-card">
+                <h4>Almacenamiento Cloud</h4>
+                <div class="detalle-precio">
+                    <span class="precio">5€/100GB/mes</span>
+                    <ul class="beneficios">
+                        <li>✔️ Acceso 24/7</li>
+                        <li>✔️ Encriptación AES-256</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="servicio-card destacado">
+                <h4>VPN Premium</h4>
+                <div class="detalle-precio">
+                    <span class="precio">7€/mes</span>
+                    <ul class="beneficios">
+                        <li>✔️ 50 países disponibles</li>
+                        <li>✔️ Sin registros</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Más servicios personales... -->
+        </div>
+    </div>
+
+    <!-- Extras -->
+    <div class="extras-servicio">
+        <h3>🔧 Servicios Adicionales</h3>
+        <div class="lista-extras">
+            <div class="extra-item">
+                <span class="icono">🌐</span>
+                <div class="detalle-extra">
+                    <h5>Dominio Web</h5>
+                    <p>.com/.es desde 10€/año</p>
+                </div>
+            </div>
             
-            // Seleccionar automáticamente el servicio correspondiente
-            Array.from(selectServicios.options).forEach(option => {
-                if(option.value === valor) option.selected = true;
-            });
-            
-            modal.style.display = 'block';
-            calcularTotal(); // Actualizar total inmediatamente
-        }
-        function abrirModalPago() {
-            document.getElementById('modalPago').style.display = 'block';
-        }
-
-        function cerrarModalPago() {
-            document.getElementById('modalPago').style.display = 'none';
-        }
-
-        function calcularTotal() {
-            const servicios = Array.from(document.getElementById('servicios').selectedOptions)
-                                .map(opt => parseFloat(opt.value.split('-')[0]));
-            const duracion = parseInt(document.getElementById('duracion').value);
-            const total = servicios.reduce((acc, val) => acc + val, 0) * duracion;
-            document.getElementById('total').value = total + '€';
-        }
-
-        document.getElementById('servicios').addEventListener('change', calcularTotal);
-        document.getElementById('duracion').addEventListener('input', calcularTotal);
-
-        function enviarFormulario(event) {
-            event.preventDefault();
-            alert('Solicitud recibida. Nos pondremos en contacto para finalizar el contrato.');
-            cerrarModalPago();
-        }
-
-        // Cerrar modal al hacer click fuera
-        window.onclick = function(event) {
-            if (event.target.className === 'modal-pago') {
-                cerrarModalPago();
-            }
-        }
-    </script>
+            <div class="extra-item">
+                <span class="icono">🔒</span>
+                <div class="detalle-extra">
+                    <h5>Certificado SSL</h5>
+                    <p>Gratis - 100€/año</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2024 Netvalia Networks - Todos los derechos reservados</p>
